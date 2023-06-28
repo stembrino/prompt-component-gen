@@ -5,14 +5,22 @@
   "author": "Fabio R. Carvalho",
   "license": "MIT",
   "type": "module",
-  "keywords": ["Nodejs", "Typescript", "Prompt", "Component"],
-  "files": ["dist"],
+  "keywords": [
+    "Nodejs",
+    "Typescript",
+    "Prompt",
+    "Component"
+  ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "tsc": "tsc",
     "build": "rm -fr dist && tsc",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
-    "main": "node ./dist/main.js"
+    "main": "node ./dist/main.js",
+    "prepare": "husky install" 
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
@@ -20,6 +28,10 @@
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
     "tsc": "^2.0.4",
     "typescript": "^5.1.5"
   },

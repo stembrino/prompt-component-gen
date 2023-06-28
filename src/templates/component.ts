@@ -1,5 +1,5 @@
-const template = (componentName: string) => (
-`import React from "react";
+const template = (componentName: string) =>
+  `import React from "react";
 import styles from "./styles.module.css";
 import { ${componentName}Props } from "./types";
 
@@ -12,6 +12,6 @@ const ${componentName}: React.FC<${componentName}Props> = () => {
 };
 
 export default ${componentName};
-`);
+`;
 
 export default template;

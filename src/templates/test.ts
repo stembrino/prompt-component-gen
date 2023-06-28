@@ -1,5 +1,5 @@
-const template = (componentName: string) => (
-`import React from "react";
+const template = (componentName: string) =>
+  `import React from "react";
 import { render } from "@testing-library/react";
 
 import ${componentName} from "..";
@@ -23,6 +23,6 @@ describe("TestComponent", () => {
     expect(container).toMatchSnapshot();
   });
 });
-`);
+`;
 
 export default template;

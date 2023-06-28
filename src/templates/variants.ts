@@ -1,5 +1,5 @@
-const template = () => (
-`import { cva } from "class-variance-authority";
+const template = () =>
+  `import { cva } from "class-variance-authority";
 import styles from "./styles.module.css";
 
 export const variants = cva(styles.base, {
@@ -20,6 +20,6 @@ export const variants = cva(styles.base, {
     size: "medium",
   },
 });
-`);
+`;
 
 export default template;

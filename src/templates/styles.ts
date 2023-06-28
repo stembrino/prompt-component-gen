@@ -1,5 +1,4 @@
-const template = () => (
+const template = () =>
   `.base {}
-  `
-  );
+  `;
 export default template;

@@ -1,5 +1,5 @@
-export const stories = (componentName: string) => (
-`import type { Meta, StoryObj } from "@storybook/react";
+export const stories = (componentName: string) =>
+  `import type { Meta, StoryObj } from "@storybook/react";
 
 import ${componentName} from "../${componentName}";
 
@@ -17,11 +17,10 @@ type Story = StoryObj<typeof ${componentName}>;
 export const Primary: Story = {
   args: {},
 };
-`
-);
+`;
 
-export const docs = (componentName: string) => (
-`import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+export const docs = (componentName: string) =>
+  `import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
 import * as ${componentName} from "./${componentName}.stories";
 
 <Meta of={${componentName}}  />
@@ -59,5 +58,4 @@ export default Example;
 <Controls />
 
 # Variants
-`
-);
+`;
