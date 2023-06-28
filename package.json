@@ -5,6 +5,7 @@
   "author": "Fabio R. Carvalho",
   "license": "MIT",
   "type": "module",
+  "keywords": ["Nodejs", "Typescript", "Prompt", "Component"],
   "files": ["dist"],
   "scripts": {
     "tsc": "tsc",
