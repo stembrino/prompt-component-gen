@@ -1,0 +1,28 @@
+{
+  "name": "prompt-component-gen",
+  "version": "0.0.2",
+  "main": "dist/main.js",
+  "author": "Fabio R. Carvalho",
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist"],
+  "scripts": {
+    "tsc": "tsc",
+    "build": "rm -fr dist && tsc",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "main": "node ./dist/main.js"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.43.0",
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.5"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.7"
+  }
+}
