@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import { Answers } from "./interfaces.js";
 
 export default async function startPrompt() {
   const answers = await inquirer.prompt([
@@ -12,7 +13,7 @@ export default async function startPrompt() {
       type: "input",
       name: "componentName",
       message: "Enter the component name:",
-      validate: function (value: any) {
+      validate: function (value: string) {
         if (value.trim().length === 0) {
           return "Component name is required";
         }
@@ -30,7 +31,7 @@ export default async function startPrompt() {
       name: "templatePathParam",
       message: "Enter the parent component name:",
       suffix: " (e.g., Card/Footer)",
-      when: (answers: any) => answers.isChildComponent === true,
+      when: (answers: Answers) => answers.isChildComponent === true,
     },
   ]);
 

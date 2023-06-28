@@ -42,10 +42,7 @@ export function createTypesTemplateWithVariants(
   );
 }
 
-export function createStylesTemplate(
-  componentName: string,
-  templatePath: string
-) {
+export function createStylesTemplate(templatePath: string) {
   fs.mkdirSync(templatePath, { recursive: true });
   fs.writeFileSync(
     path.join(templatePath, `styles.module.css`),
@@ -53,10 +50,7 @@ export function createStylesTemplate(
   );
 }
 
-export function createVariantsTemplate(
-  componentName: string,
-  templatePath: string
-) {
+export function createVariantsTemplate(templatePath: string) {
   fs.mkdirSync(templatePath, { recursive: true });
   fs.writeFileSync(path.join(templatePath, `variants.ts`), variantsTemplate());
 }

@@ -2,12 +2,13 @@ import path from "path";
 
 import startPrompt from "./prompt.js";
 import * as templates from "./templates.js";
+import { Answers } from "./interfaces.js";
 
 async function createTemplates({
   hasStorybook,
   componentName,
   templatePathParam,
-}: any) {
+}: Answers) {
   console.info("INFO: has storybook:", hasStorybook);
   console.info("INFO: component name:", componentName);
   console.info("INFO: template path param:", templatePathParam);
@@ -18,7 +19,7 @@ async function createTemplates({
 
   hasStorybook &&
     templates.createStorybookTemplate(componentName, templatePath);
-  templates.createStylesTemplate(componentName, templatePath);
+  templates.createStylesTemplate(componentName);
   templates.createComponentTemplate(componentName, templatePath);
   templates.createIndexTemplate(componentName, templatePath);
   templates.createTestTemplate(componentName, templatePath);
